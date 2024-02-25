@@ -33,8 +33,8 @@ class ProductManager{
         const newProduct = { id, title, description, price, thumbnail, code, stock };
         this.products.push(newProduct);
 
-        let strProduct = JSON.stringify(newProduct , null, '\t')
-        fs.appendFile(this.path, strProduct, (error)=>{
+        let strProducts = JSON.stringify(this.products , null, '\t')
+        fs.writeFile(this.path, strProducts, (error)=>{
             if (error) return console.error('ERROR al escribir el producto')
 
         })
@@ -44,8 +44,8 @@ class ProductManager{
     getProducts(){
             fs.readFile(this.path, "utf-8", (error, result) =>{
             if (error) return console.log("ERROR al leer el archivo");
-            
-            console.log(JSON.parse(result));
+            console.log(JSON.parse(result))
+            return 
         })
     
     }
@@ -58,6 +58,14 @@ class ProductManager{
         } else {
             console.error("Producto no encontrado.");
         }
+    }
+
+    //actualizar producto
+
+    updateProduct(id, field){
+        let selected = this.products.find((product) => product.id === id);
+
+
     }
 }
 // Uso
@@ -85,8 +93,10 @@ const productData2 = {
 
 };
 manager.addProduct(productData2);
-const productList = manager.getProducts();
-console.log(productList);
+const productList = () => manager.getProducts();
 
-// const getById = manager.getProductById(1);
-// console.log(getById);
+productList();
+
+
+const getById = manager.getProductById(1);
+console.log(getById);
