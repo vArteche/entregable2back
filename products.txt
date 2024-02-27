@@ -1,0 +1,19 @@
+[
+	{
+		"id": 1,
+		"title": "Camiseta",
+		"description": "Camiseta de algodón",
+		"price": 19.99,
+		"thumbnail": "camiseta.jpg",
+		"code": "C001",
+		"stock": 50
+	}
+]	"id": 2,
+		"title": "Pantalón",
+		"description": "Pantalón vaquero",
+		"price": 31.99,
+		"thumbnail": "pantalon.jpg",
+		"code": "C002",
+		"stock": 36
+	}
+]
