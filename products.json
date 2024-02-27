@@ -7,13 +7,14 @@
 		"thumbnail": "camiseta.jpg",
 		"code": "C001",
 		"stock": 50
-	}
-]	"id": 2,
-		"title": "Pantalón",
-		"description": "Pantalón vaquero",
-		"price": 31.99,
-		"thumbnail": "pantalon.jpg",
-		"code": "C002",
+	},
+	{
+		"id": 2,
+		"title": "Remerón",
+		"description": "Remerón Oversize de algodón",
+		"price": 37.99,
+		"thumbnail": "remeron.jpg",
+		"code": "C003",
 		"stock": 36
 	}
 ]
